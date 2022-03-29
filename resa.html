@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Resa</title>
+    <style>
+        h1{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="recap.php" method="post" enctype="multipart/form-data" >
+       
+        <h1>Formulaire de commande de sandwichs</h1><br>
+        <label for="nom" class="form-label">Votre nom:</label>
+        <input type="text" name="nom" id="nom"placeholder="nom" class="form-control w-75 p-3"><br>
+       <label for="prenom"class="titre" class="form-label">Votre prenom:</label>
+        <input type="text" name="prenom" id="prenom" placeholder="prenom"  class="form-control  w-75 p-3"><br><br>
+        <label for="adr"class="form-label">Votre adresse:</label>
+        <textarea name="adresse" id="adr" cols="30" rows="5"  class="form-control w-75 p-3"></textarea><br><br>
+        <label for="nb_sandwichs" class="form-label">Le nombre de sandwichs à commander :</label>
+        <input type="number" name="nb_sandwichs" id="nb_sandwichs"  class="form-control  w-75 p-3"><br><br>
+        <label for="type" class="titre">Le type de sandwichs à commander:</label>
+        <select name="type" id="type" class="form-select form-select-lg mb-3 w-75 p-3" aria-label=".form-select-lg example">
+            <option value="viande">viande</option>
+            <option value="poulet">poulet</option>
+            <option  value="escalope">escalope</option>
+        </select><br>
+        Les ingrédients à ajouter: <br><br>
+        <div class="form-check  w-75 p-3">
+        <input class="form-check-input" type="checkbox" name="sup1" value="harissa" id="flexCheckDefault1">
+            <label class="form-check-label" for="flexCheckDefault1">
+              harissa
+            </label>
+            </div>
+            <div class="form-check w-75 p-3">
+                
+                <input class="form-check-input " type="checkbox" name="sup2" value="salade"  id="flexCheckDefault2">
+                <label class="form-check-label" for="flexCheckDefault2">
+                    salade
+                </label>
+                </div>
+                <div class="form-check w-75 p-3">
+                <input class="form-check-input" type="checkbox" name="sup3" value="mayonnaise" id="flexCheckDefault3">
+                <label class="form-check-label" for="flexCheckDefault3">
+                    mayonnaise
+                </label>
+            </div><br>
+      
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Choisir un fichier:</label><br><br>
+            <input class="form-control " type="file" name="fichier" id="formFile" >
+          </div>
+    <button type="submit" name="valider" class="btn btn-primary">Envoyer</button>
+
+    </form>
+</div>
+</body>
+</html>
